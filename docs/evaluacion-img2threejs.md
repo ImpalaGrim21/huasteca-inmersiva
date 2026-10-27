@@ -110,4 +110,3 @@ Criterios iniciales propuestos; son puertas de aceptación para medir, no result
 Para hoteles/hostales, el primer valor sería una fachada o entrada reconocible enlazada con fotos reales y datos del negocio; para plazas, un hito y mobiliario comprobado; para servicios, señalización y anclajes claros. Los interiores fieles necesitarían una captura y validación específica. La plataforma seguiría usando datos geográficos para la estructura del territorio y contenido real para explicar qué ofrece cada lugar.
 
 **Decisión recomendada:** aprovechar la disciplina de producción y ensayar después un asset acotado. Mantener pendiente cualquier adopción técnica hasta disponer de ese resultado comparativo; esta revisión no demuestra una mejora visual medida, fotorealismo ni más FPS.
-

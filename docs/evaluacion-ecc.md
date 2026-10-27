@@ -84,4 +84,3 @@ El manifiesto Codex y su README todavía anuncian **281 skills**, frente a los *
 4. Adoptar únicamente lo que muestre utilidad. Dejar fuera instalación full, observer/instincts, vault, global sync, yolo, MCP duplicados y servicios Pro hasta que haya una necesidad concreta y revisión de su superficie.
 
 **Decisión de esta revisión:** ECC ofrece material útil para disciplinar QA y revisión. No aporta una mejora demostrada de producción o productividad por instalarlo; para Huasteca, la mejor relación entre valor y riesgo es la adopción selectiva de métodos con pruebas propias, manteniendo memoria, permisos y herramientas actuales.
-
