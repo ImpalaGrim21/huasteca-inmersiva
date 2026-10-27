@@ -39,4 +39,15 @@ Evidencia:
 - [Ventana de Tamul y punto informativo](screenshots-v2/ventana-tamul.webp)
 - [Recorrido por capítulos](screenshots-v2/recorrido-capitulos.webp)
 
-La verificación remota del despliegue se registra tras completar GitHub Actions.
+## Publicación verificada
+
+GitHub Actions completó **build** y **deploy** con éxito para el commit de aplicación `026bf35d9784efa8896482838a1ef0f62c56d6a2`.
+
+- [Sitio público](https://impalagrim21.github.io/huasteca-inmersiva/)
+- [Ejecución de publicación](https://github.com/ImpalaGrim21/huasteca-inmersiva/actions/runs/40449593946)
+- GitHub Pages configurado con fuente `workflow` y HTTPS habilitado.
+- Verificación remota mediante navegador sin inicio de sesión: HTTP 200, canvas Three.js activo, fotografías cargadas, área con tres destinos, fotografía de Puente de Dios, capítulo Tamul con avance 500/1000 y reproducción/pausa con progreso real. Cero errores JavaScript y cero respuestas 4xx/5xx.
+- Sitio abierto y conservado como entrega en el navegador de la aplicación.
+- [Captura del sitio público](screenshots-v2/github-pages-publicado.webp).
+
+La compilación local se dejó nuevamente con base `/` para preservar el acceso de desarrollo; GitHub Actions utiliza la base del proyecto público. No se publican memoria local, dependencias, credenciales ni archivos de trabajo internos.
