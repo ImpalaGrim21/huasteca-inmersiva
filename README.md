@@ -82,6 +82,19 @@ La guía y las fuentes no constituyen inventario comercial. Las habitaciones, se
 
 Guías, paquetes e identidad se guardan en `localStorage`, por navegador y origen. El enlace compartido transporta una selección de lugares; no sincroniza cambios posteriores entre personas ni confirma una contratación. La aplicación pública y un servidor local tienen almacenes distintos.
 
+## Skills de producción instalados
+
+El flujo utiliza img2threejs v2.0.0 fijado a commit para autoría 3D, y seis skills ECC locales para verificación, E2E, QA de navegador, accesibilidad, rendimiento y revisión de entradas. Las instrucciones de [AGENTS.md](AGENTS.md) indican cuándo aplicarlos; [el flujo reproducible](docs/skills-workflow.md) documenta instalación, versiones y comprobaciones. Estas herramientas de autoría no se publican dentro de `dist/`.
+
+```powershell
+npm run skills:doctor
+npm run skills:install
+npm run verify
+```
+
+`verify` valida la integridad de los skills de proyecto, compila TypeScript/Vite y ejecuta las regresiones de guía compartida, teclado/caminata/minimapa, paquetes y recuperación. Reutiliza Playwright y Chrome disponibles; conserva evidencia compacta sólo al fallar. En CI se verifica antes de desplegar, y la herramienta global de autoría se omite explícitamente.
+
+Las mejoras y límites de esta aplicación se registran en [QA de adopción](docs/qa-skills-pilot.md) y [revisión ECC](docs/revision-ecc-guia-piloto.md). El [análisis previo](docs/evaluacion-herramientas-produccion.md) se conserva como evaluación estática anterior a la instalación.
 ## Arquitectura, fuentes y evidencia
 
 | Archivo o documento | Contenido |

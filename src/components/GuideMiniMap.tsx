@@ -112,7 +112,9 @@ const MapCanvas = memo(function MapCanvas({ geometry, places, selectedId, camera
     const marker: [number, number] = [clamp(point[0], 9, width - 9), clamp(point[1], projection.top, height - projection.bottom)]
     const groundDistance = Math.hypot(camera.target[0] - camera.position[0], camera.target[2] - camera.position[2])
     const length = clamp(groundDistance * projection.scale, expanded ? 28 : 19, expanded ? 92 : 39)
-    const halfAngle = clamp(camera.fov, 25, 110) * Math.PI / 360
+    const verticalHalfAngle = clamp(camera.fov, 1, 179) * Math.PI / 360
+    const aspect = Number.isFinite(camera.aspect) && camera.aspect > 0 ? camera.aspect : 1
+    const halfAngle = Math.atan(Math.tan(verticalHalfAngle) * aspect)
     const first = [point[0] + Math.sin(camera.yaw - halfAngle) * length, point[1] - Math.cos(camera.yaw - halfAngle) * length]
     const last = [point[0] + Math.sin(camera.yaw + halfAngle) * length, point[1] - Math.cos(camera.yaw + halfAngle) * length]
     return { point, marker, outside, frustum: `M${point[0]},${point[1]} L${first[0]},${first[1]} L${last[0]},${last[1]} Z` }

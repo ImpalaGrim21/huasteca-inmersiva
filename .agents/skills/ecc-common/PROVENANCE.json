@@ -1,0 +1,124 @@
+{
+  "repository": "https://github.com/affaan-m/ECC",
+  "commit": "25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b",
+  "installedAt": "2026-10-27T05:43:37.7108786Z",
+  "scope": "project instruction-only",
+  "runtimeDependencies": [],
+  "hooks": false,
+  "mcp": false,
+  "globalConfigChanges": false,
+  "memoryChanges": false,
+  "transformations": [
+    "Frontmatter name prefixed ecc-",
+    "Local integration preamble inserted after frontmatter",
+    "Six relative related links in react-performance rewritten to pinned upstream URLs"
+  ],
+  "skills": [
+    {
+      "name": "ecc-verification-loop",
+      "upstreamName": "verification-loop",
+      "path": ".agents/skills/ecc-verification-loop/SKILL.md",
+      "sourcePath": "skills/verification-loop/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/verification-loop/SKILL.md",
+      "originalBytes": 3064,
+      "originalSha256": "5b06be54d4852f60e6cf1b04c6e9a4748554334eb3e41af6c0959b544e6464ae",
+      "installedBytes": 3751,
+      "installedSha256": "86034c4a60e98ce4d3d734ed73e80482e9359ec8d39622ee12896b5abb4617be"
+    },
+    {
+      "name": "ecc-e2e-testing",
+      "upstreamName": "e2e-testing",
+      "path": ".agents/skills/ecc-e2e-testing/SKILL.md",
+      "sourcePath": "skills/e2e-testing/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/e2e-testing/SKILL.md",
+      "originalBytes": 8170,
+      "originalSha256": "b0e00e7e17cb259101139900816c5528aed18dd10bcf5f9cb42cfc35baf8a755",
+      "installedBytes": 8851,
+      "installedSha256": "32d1b4f3a023f610520943ea666da426ff83158d52076aaa4a722af7655cddcc"
+    },
+    {
+      "name": "ecc-browser-qa",
+      "upstreamName": "browser-qa",
+      "path": ".agents/skills/ecc-browser-qa/SKILL.md",
+      "sourcePath": "skills/browser-qa/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/browser-qa/SKILL.md",
+      "originalBytes": 4104,
+      "originalSha256": "6eb78a2460adcde116e6b44fcdff7ae37aeec6208241a24417cb2db4b3b254cd",
+      "installedBytes": 4784,
+      "installedSha256": "39b9532bb7bc977c7a2cd6f03caec3c07c5318ffb6178322d68ae47cc5b3dc74"
+    },
+    {
+      "name": "ecc-frontend-a11y",
+      "upstreamName": "frontend-a11y",
+      "path": ".agents/skills/ecc-frontend-a11y/SKILL.md",
+      "sourcePath": "skills/frontend-a11y/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/frontend-a11y/SKILL.md",
+      "originalBytes": 12861,
+      "originalSha256": "e00991a3f4d47fcf1529dd74a080afcf46137dc5061e70dc6e3da7b27f2ae3f3",
+      "installedBytes": 13544,
+      "installedSha256": "5aaecd5505c2259d86713a2ebf160cf3dfc536f4adf52ebb09563bd9309aa18c"
+    },
+    {
+      "name": "ecc-react-performance",
+      "upstreamName": "react-performance",
+      "path": ".agents/skills/ecc-react-performance/SKILL.md",
+      "sourcePath": "skills/react-performance/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/react-performance/SKILL.md",
+      "originalBytes": 18184,
+      "originalSha256": "ac76e8694d4f802a7bccc3c07a73ac68ace6d82a65ea10f10d8b7384dda61a8f",
+      "installedBytes": 19353,
+      "installedSha256": "7ff16bbeda024ded9971ce03b76c37afaec860b2a2bd50dce34951b4e51d485d"
+    },
+    {
+      "name": "ecc-security-review",
+      "upstreamName": "security-review",
+      "path": ".agents/skills/ecc-security-review/SKILL.md",
+      "sourcePath": "skills/security-review/SKILL.md",
+      "sourceUrl": "https://github.com/affaan-m/ECC/blob/25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b/skills/security-review/SKILL.md",
+      "originalBytes": 12955,
+      "originalSha256": "b9eb6416eebc8dda046674f0a2dbb3be88aff526d182b60a0f55998d3d6d0d8d",
+      "installedBytes": 13640,
+      "installedSha256": "97d215163a7649bb61a94134124d536e347a9c70cfb65112921ba89b12f558ab"
+    }
+  ],
+  "shared": [
+    ".agents/skills/ecc-common/HUASTECA.md",
+    ".agents/skills/ecc-common/LICENSE-ECC.txt",
+    ".agents/skills/ecc-common/NOTICE.md"
+  ],
+  "referencesNotInstalled": [
+    "react-patterns",
+    "react-testing",
+    "frontend-patterns",
+    "accessibility",
+    "nextjs-turbopack",
+    "rules/react"
+  ],
+  "upstreamSourceRole": "guidance subject to current user/environment instructions; no executable code copied",
+  "sharedResources": [
+    {
+      "bytes": 7429,
+      "path": ".agents/skills/ecc-common/HUASTECA.md",
+      "sha256": "3b2993713a3658b23a5cfb900dc62edd7b947511ef896c48e0dbe8bbe28ca3c7"
+    },
+    {
+      "bytes": 1071,
+      "path": ".agents/skills/ecc-common/LICENSE-ECC.txt",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "bytes": 1141,
+      "path": ".agents/skills/ecc-common/NOTICE.md",
+      "sha256": "1a651c08d756db26efc026166f47fd7b8099f1fd69f365fec6c0a55308191e0e"
+    }
+  ],
+  "validation": {
+    "relatedRemoteReferencesExistInPinnedTree": true,
+    "installedAndSourceHashesMatch": true,
+    "originalBodiesPreserved": true,
+    "frontmatterNamesValid": true,
+    "noScriptsBundled": true,
+    "readScope": "Six full source bodies, local preambles/shared notes, installed contents reconstructed against source; no upstream code executed",
+    "localLinksResolve": true
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "ecc": {
+    "repository": "https://github.com/affaan-m/ECC",
+    "commit": "25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b",
+    "scope": "project instruction-only",
+    "files": [
+      {
+        "path": ".agents/skills/ecc-verification-loop/SKILL.md",
+        "name": "ecc-verification-loop",
+        "bytes": 3751,
+        "sha256": "86034c4a60e98ce4d3d734ed73e80482e9359ec8d39622ee12896b5abb4617be",
+        "canonicalBytes": 3751,
+        "canonicalSha256": "86034c4a60e98ce4d3d734ed73e80482e9359ec8d39622ee12896b5abb4617be"
+      },
+      {
+        "path": ".agents/skills/ecc-e2e-testing/SKILL.md",
+        "name": "ecc-e2e-testing",
+        "bytes": 8851,
+        "sha256": "32d1b4f3a023f610520943ea666da426ff83158d52076aaa4a722af7655cddcc",
+        "canonicalBytes": 8851,
+        "canonicalSha256": "32d1b4f3a023f610520943ea666da426ff83158d52076aaa4a722af7655cddcc"
+      },
+      {
+        "path": ".agents/skills/ecc-browser-qa/SKILL.md",
+        "name": "ecc-browser-qa",
+        "bytes": 4784,
+        "sha256": "39b9532bb7bc977c7a2cd6f03caec3c07c5318ffb6178322d68ae47cc5b3dc74",
+        "canonicalBytes": 4784,
+        "canonicalSha256": "39b9532bb7bc977c7a2cd6f03caec3c07c5318ffb6178322d68ae47cc5b3dc74"
+      },
+      {
+        "path": ".agents/skills/ecc-frontend-a11y/SKILL.md",
+        "name": "ecc-frontend-a11y",
+        "bytes": 13544,
+        "sha256": "5aaecd5505c2259d86713a2ebf160cf3dfc536f4adf52ebb09563bd9309aa18c",
+        "canonicalBytes": 13544,
+        "canonicalSha256": "5aaecd5505c2259d86713a2ebf160cf3dfc536f4adf52ebb09563bd9309aa18c"
+      },
+      {
+        "path": ".agents/skills/ecc-react-performance/SKILL.md",
+        "name": "ecc-react-performance",
+        "bytes": 19353,
+        "sha256": "7ff16bbeda024ded9971ce03b76c37afaec860b2a2bd50dce34951b4e51d485d",
+        "canonicalBytes": 19353,
+        "canonicalSha256": "7ff16bbeda024ded9971ce03b76c37afaec860b2a2bd50dce34951b4e51d485d"
+      },
+      {
+        "path": ".agents/skills/ecc-security-review/SKILL.md",
+        "name": "ecc-security-review",
+        "bytes": 13640,
+        "sha256": "97d215163a7649bb61a94134124d536e347a9c70cfb65112921ba89b12f558ab",
+        "canonicalBytes": 13640,
+        "canonicalSha256": "97d215163a7649bb61a94134124d536e347a9c70cfb65112921ba89b12f558ab"
+      },
+      {
+        "path": ".agents/skills/ecc-common/HUASTECA.md",
+        "bytes": 7429,
+        "sha256": "3b2993713a3658b23a5cfb900dc62edd7b947511ef896c48e0dbe8bbe28ca3c7",
+        "canonicalBytes": 7429,
+        "canonicalSha256": "3b2993713a3658b23a5cfb900dc62edd7b947511ef896c48e0dbe8bbe28ca3c7"
+      },
+      {
+        "path": ".agents/skills/ecc-common/LICENSE-ECC.txt",
+        "bytes": 1071,
+        "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2",
+        "canonicalBytes": 1071,
+        "canonicalSha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+      },
+      {
+        "path": ".agents/skills/ecc-common/NOTICE.md",
+        "bytes": 1141,
+        "sha256": "1a651c08d756db26efc026166f47fd7b8099f1fd69f365fec6c0a55308191e0e",
+        "canonicalBytes": 1141,
+        "canonicalSha256": "1a651c08d756db26efc026166f47fd7b8099f1fd69f365fec6c0a55308191e0e"
+      },
+      {
+        "path": ".agents/skills/ecc-common/PROVENANCE.json",
+        "bytes": 5516,
+        "sha256": "16b53a881cfd3f0ef028fbfe3c93618a3a9e5d50f6e778c2b879e06011ac44e2",
+        "canonicalBytes": 5393,
+        "canonicalSha256": "66bfb81e38e46a4f25512c6270d3a3b4ce0f604a765856f4f98213cbedd9d277"
+      }
+    ],
+    "textNormalization": "crlf-to-lf"
+  },
+  "img2threejs": {
+    "repository": "https://github.com/img2threejs/img2threejs.git",
+    "commit": "954cd5845e90efd045694bab725d68a9863c20e0",
+    "scope": "Codex user managed link",
+    "hostPathSegments": [
+      ".codex",
+      "skills",
+      "img2threejs"
+    ],
+    "releasePathSegments": [
+      ".img2threejs",
+      "releases",
+      "954cd5845e90efd045694bab725d68a9863c20e0",
+      "img2threejs"
+    ],
+    "skillSha256": "35d363c919bc25a90973dd633192fa9d7f5dc41db9d99031bf190043c9b7eac9",
+    "initialMeasuredBytesIncludingGit": 7677009,
+    "recommendedMaxBytes": 16777216,
+    "installer": {
+      "url": "https://raw.githubusercontent.com/img2threejs/img2threejs/954cd5845e90efd045694bab725d68a9863c20e0/bin/img2threejs.mjs",
+      "sha256": "725c796d457272c1610fd502a4523af89bb298a5380a604d36a7b7f6d747386f",
+      "bytes": 11765,
+      "cachePath": ".work/skill-adoption/img2threejs-installer.mjs"
+    },
+    "skillTextNormalization": "crlf-to-lf",
+    "skillCanonicalSha256": "d9fa095b398d806ec539022f601b77735446ede61ad7b07abe857e5cfb7e97a2"
+  },
+  "runtimeDependencies": [],
+  "notes": [
+    "ECC ships in the repository; install validates it without downloading the catalog.",
+    "Authoring tools are skipped explicitly by --project-only and are never installed by CI.",
+    "Updating a pin requires source review, license review and an intentional lock/hash update."
+  ]
+}

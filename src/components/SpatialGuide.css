@@ -20,3 +20,5 @@
 @media(max-width:760px){.sg-in-pov .sg-world-tools{top:210px}.sg-focus-view .sg-world-tools{top:65px}.sg-place-type{color:#5e7b46!important}.sg-place-type>span{font-size:8px}.sg-statusbar>button{font-size:7px}.sg-statusbar>button:last-child{font-size:7px}.sg-plan-note{font-size:9px}.sg-category-nav>button,.sg-category-nav>button.active{font-size:10px}}
 
 @media(max-width:760px){.sg-walk-pad>button,.sg-walk-pad>div>button,.sg-walk-pad>div>span,.sg-focus-view .sg-walk-pad>button,.sg-focus-view .sg-walk-pad>div>button,.sg-focus-view .sg-walk-pad>div>span{width:44px;height:44px}}
+.sg-in-pov .sg-directory{visibility:hidden}
+.sg-in-pov.sg-directory-open .sg-directory{visibility:visible}

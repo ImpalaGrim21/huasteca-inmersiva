@@ -37,3 +37,6 @@ El objetivo sigue siendo una guía reconocible de pueblos, plazas, alojamientos 
 - [Avance público](https://impalagrim21.github.io/huasteca-inmersiva/): guía espacial de Xilitla, 19 fichas regionales, seis pines locales, POV/caminata, minimapa y guía personal, además del estudio previo. La maqueta identifica alturas, fachadas y mobiliario interpretativos.
 
 Las evaluaciones son inspecciones estáticas con fuentes primarias fijadas. El avance de la plataforma sí fue ejecutado y probado en navegador. No se realizaron generaciones ni benchmarks de los dos repositorios evaluados y no se afirman ahorros de tiempo, tokens o FPS.
+## Adopción posterior autorizada
+
+Tras esta evaluación, el usuario pidió instalar y aplicar las herramientas. img2threejs y los seis skills ECC están instalados con versiones fijadas; consultar [flujo reproducible](skills-workflow.md), [inventario ECC](skills-ecc-installed.md) y [QA de aplicación](qa-skills-pilot.md). La evaluación anterior describe lo inspeccionado antes de esa instalación; no convierte el piloto posterior en una medición de productividad comparada.

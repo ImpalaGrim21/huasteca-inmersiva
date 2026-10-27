@@ -6,6 +6,7 @@ export interface GuideCameraState {
   yaw: number
   mode: 'orbit' | 'flying' | 'pov'
   fov: number
+  aspect: number
 }
 
 export type GuideViewpoint = 'arrival' | 'plaza' | 'street'

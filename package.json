@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc -b && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "skills:install": "pwsh -NoProfile -File scripts/install-skills.ps1",
+    "skills:doctor": "node scripts/skills-doctor.mjs",
+    "test:e2e": "node --test --test-concurrency=1 tests/e2e/platform.test.mjs",
+    "verify": "node scripts/skills-doctor.mjs --project-only && npm run build && npm run test:e2e"
   },
   "dependencies": {
     "react": "^19.2.0",

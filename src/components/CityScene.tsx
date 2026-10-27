@@ -556,8 +556,8 @@ export default function CityScene(props: CitySceneProps) {
       catch { renderingAvailable = false; cancelAnimationFrame(frame); frame = 0; setFallback(true); p.onAvailabilityChange?.(false); return }
       if (previewAt <= now && mode !== 'flying' && !walking) { previewAt = Infinity; capturePreview() }
       camera.getWorldDirection(direction)
-      const nextState: GuideCameraState = { position: [camera.position.x, camera.position.y, camera.position.z], target: [desiredLook.x, desiredLook.y, desiredLook.z], yaw: Math.atan2(direction.x, -direction.z), mode, fov: camera.fov }
-      const stateKey = `${nextState.position.map(n => n.toFixed(2))}|${nextState.target.map(n => n.toFixed(2))}|${mode}|${camera.fov.toFixed(1)}`
+      const nextState: GuideCameraState = { position: [camera.position.x, camera.position.y, camera.position.z], target: [desiredLook.x, desiredLook.y, desiredLook.z], yaw: Math.atan2(direction.x, -direction.z), mode, fov: camera.fov, aspect: camera.aspect }
+      const stateKey = `${nextState.position.map(n => n.toFixed(2))}|${nextState.target.map(n => n.toFixed(2))}|${mode}|${camera.fov.toFixed(1)}|${camera.aspect.toFixed(4)}`
       const pendingNotify = stateKey !== lastState
       if (pendingNotify && now - lastNotify >= 100) { lastNotify = now; lastState = stateKey; p.onCameraChange(nextState) }
       if (flight || walking || previewAt < Infinity || (pendingNotify && now - lastNotify < 100)) requestDraw()
@@ -568,9 +568,74 @@ export default function CityScene(props: CitySceneProps) {
     controls.addEventListener('change', requestDraw); controls.addEventListener('start', onOrbitStart); controls.addEventListener('end', onOrbitEnd)
     renderer.domElement.addEventListener('pointerdown', onPointerDown); renderer.domElement.addEventListener('pointermove', onPointerMove); renderer.domElement.addEventListener('pointerup', onPointerUp); renderer.domElement.addEventListener('pointercancel', onPointerCancel); renderer.domElement.addEventListener('pointerleave', onPointerLeave); renderer.domElement.addEventListener('wheel', onWheel, { passive: false }); renderer.domElement.addEventListener('webglcontextlost', onContextLost)
     window.addEventListener('keydown', onKeyDown); window.addEventListener('keyup', onKeyUp); window.addEventListener('blur', clearInput); document.addEventListener('visibilitychange', onVisibility); reduced.addEventListener('change', onReducedMotion)
+    let cleanupInspection: (() => void) | undefined
+    if (import.meta.env.DEV) {
+      const inspectScene = () => {
+        if (disposed || !renderingAvailable || renderer.getContext().isContextLost()) {
+          mount.dataset.sceneMetrics = JSON.stringify({ schemaVersion: 1, available: false })
+          return
+        }
+        // The last normal render may be the preview. Sample the main camera explicitly.
+        const previousTarget = renderer.getRenderTarget()
+        try { renderer.setRenderTarget(null); renderer.render(scene, camera) }
+        catch { mount.dataset.sceneMetrics = JSON.stringify({ schemaVersion: 1, available: false, reason: 'Main-camera inspection render failed' }); return }
+        finally { renderer.setRenderTarget(previousTarget) }
+        const uniqueTextures = new Set<THREE.Texture>(textures)
+        const addTexture = (value: unknown) => {
+          if (Array.isArray(value)) value.forEach(addTexture)
+          else if (value && typeof value === 'object' && 'isTexture' in value && value.isTexture === true) uniqueTextures.add(value as THREE.Texture)
+        }
+        addTexture(scene.background); addTexture(scene.environment); addTexture(previewTarget.texture); addTexture(previewTarget.depthTexture)
+        scene.traverse(object => {
+          const mesh = object as THREE.Mesh
+          const materials = mesh.material ? Array.isArray(mesh.material) ? mesh.material : [mesh.material] : []
+          materials.forEach(material => {
+            Object.values(material).forEach(addTexture)
+            if ('uniforms' in material) Object.values((material as THREE.ShaderMaterial).uniforms).forEach(uniform => addTexture(uniform.value))
+          })
+          const shadow = (object as THREE.DirectionalLight).shadow
+          addTexture(shadow?.map?.texture); addTexture(shadow?.map?.depthTexture); addTexture(shadow?.mapPass?.texture)
+        })
+        let estimatedBaseRgba8Bytes = 0, texturesWithUnknownDimensions = 0
+        uniqueTextures.forEach(texture => {
+          const images = Array.isArray(texture.image) ? texture.image : [texture.image]
+          let measured = false
+          images.forEach(image => {
+            const size = image as { naturalWidth?: number; naturalHeight?: number; videoWidth?: number; videoHeight?: number; width?: number; height?: number } | null
+            const imageWidth = Number(size?.naturalWidth || size?.videoWidth || size?.width || 0), imageHeight = Number(size?.naturalHeight || size?.videoHeight || size?.height || 0)
+            if (imageWidth > 0 && imageHeight > 0 && Number.isFinite(imageWidth * imageHeight)) { estimatedBaseRgba8Bytes += imageWidth * imageHeight * 4; measured = true }
+          })
+          if (!measured) texturesWithUnknownDimensions++
+        })
+        const groups = scene.children.filter((object): object is THREE.Group => object instanceof THREE.Group).map((group, index) => {
+          const geometries = new Set<THREE.BufferGeometry>(), materials = new Set<THREE.Material>()
+          let objects = 0, meshes = 0, instancedMeshes = 0, instances = 0
+          group.traverse(object => {
+            objects++
+            const mesh = object as THREE.Mesh
+            if (mesh.isMesh) meshes++
+            if (mesh.geometry) geometries.add(mesh.geometry)
+            if (Array.isArray(mesh.material)) mesh.material.forEach(material => materials.add(material)); else if (mesh.material) materials.add(mesh.material)
+            if ((object as THREE.InstancedMesh).isInstancedMesh) { instancedMeshes++; instances += (object as THREE.InstancedMesh).count }
+          })
+          return { name: group.name || `scene-group-${index + 1}`, objects, meshes, instancedMeshes, instances, geometries: geometries.size, materials: materials.size }
+        })
+        mount.dataset.sceneMetrics = JSON.stringify({
+          schemaVersion: 1, available: true, sampledAt: new Date().toISOString(), renderPass: 'main-camera-on-demand',
+          render: { ...renderer.info.render }, memory: { ...renderer.info.memory }, programs: renderer.info.programs?.length || 0,
+          viewport: { width, height, pixelRatio: renderer.getPixelRatio(), drawingBufferWidth: renderer.domElement.width, drawingBufferHeight: renderer.domElement.height },
+          trackedTextures: { uniqueCount: uniqueTextures.size, estimatedBaseRgba8Bytes, texturesWithUnknownDimensions, estimate: 'width × height × 4 per base image; excludes mipmaps, format/compression differences, depth buffers and driver overhead; not measured GPU memory' },
+          camera: { position: camera.position.toArray(), target: desiredLook.toArray(), fov: camera.fov, aspect: camera.aspect, mode },
+          selectedId: latest.current.selectedId, groups,
+        })
+      }
+      mount.addEventListener('huasteca:inspect', inspectScene)
+      cleanupInspection = () => { mount.removeEventListener('huasteca:inspect', inspectScene); delete mount.dataset.sceneMetrics }
+    }
     requestDraw(); setReady(true); latest.current.onAvailabilityChange?.(true)
     return () => {
       disposed = true; cancelAnimationFrame(frame); resizeObserver.disconnect(); invalidateRef.current = () => {}; keys.clear()
+      cleanupInspection?.()
       controls.removeEventListener('change', requestDraw); controls.removeEventListener('start', onOrbitStart); controls.removeEventListener('end', onOrbitEnd); controls.dispose()
       renderer.domElement.removeEventListener('pointerdown', onPointerDown); renderer.domElement.removeEventListener('pointermove', onPointerMove); renderer.domElement.removeEventListener('pointerup', onPointerUp); renderer.domElement.removeEventListener('pointercancel', onPointerCancel); renderer.domElement.removeEventListener('pointerleave', onPointerLeave); renderer.domElement.removeEventListener('wheel', onWheel); renderer.domElement.removeEventListener('webglcontextlost', onContextLost)
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', clearInput); document.removeEventListener('visibilitychange', onVisibility); reduced.removeEventListener('change', onReducedMotion)
