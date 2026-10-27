@@ -92,6 +92,7 @@ Guías, paquetes e identidad se guardan en `localStorage`, por navegador y orige
 | [App](src/App.tsx) | Entrada a la guía y flujos del estudio, editor e identidad. |
 | [ImmersiveExplorer](src/components/ImmersiveExplorer.tsx), [TerrainMap](src/components/TerrainMap.tsx), [PhotoExperience](src/components/PhotoExperience.tsx) | Atlas regional, recorridos y ventanas fotográficas. |
 | [Fuentes urbanas](docs/guide-map-sources.md) / [investigación regional](docs/huasteca-guide-research.md) | Procedencia, coordenadas, consultas, verificación y datos desconocidos. |
+| [Evaluación de herramientas de producción](docs/evaluacion-herramientas-produccion.md) | Dictamen de img2threejs/ECC, capacidades verificadas, límites y adopción propuesta. |
 | [Referente y adaptación](docs/referente-maestro-football-stadium.md) | Análisis de selección espacial, perspectiva y acción aplicado de forma original a turismo. |
 | [Fuentes del relieve](docs/map-sources.md) | Elevación, satélite, proyección, escala y peticiones reproducibles. |
 | [Créditos de imágenes](docs/image-credits.md) / [tipografías](docs/font-credits.md) | Autores, licencias y archivos locales. |
