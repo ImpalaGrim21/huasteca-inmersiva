@@ -1,0 +1,37 @@
+{
+  "asset": "huasteca-satellite.webp",
+  "bounds": {
+    "west": -99.5,
+    "south": 21.35,
+    "east": -98.8,
+    "north": 22.2
+  },
+  "crs": "EPSG:3857",
+  "bbox3857": [
+    -11076289.333930722,
+    2433661.6158086867,
+    -10998365.690375429,
+    2535554.6198507366
+  ],
+  "width": 1224,
+  "height": 1600,
+  "bytes": 447614,
+  "topRow": "north",
+  "leftColumn": "west",
+  "uvMapping": {
+    "u": "(lon-west)/(east-west)",
+    "v": "(mercator(north)-mercator(lat))/(mercator(north)-mercator(south))",
+    "mercator": "asinh(tan(lat * PI / 180)) * 6378137"
+  },
+  "source": "NASA GIBS / Landsat WELD",
+  "layer": "Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual",
+  "time": "2000-12-01",
+  "datasetVersion": "3.1",
+  "nativeResolutionMeters": 30,
+  "isCurrentImagery": false,
+  "processing": "WMS crop, WebP quality 80; no generative alteration",
+  "retrievedAt": "2026-10-26",
+  "requestUrl": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=Landsat_WELD_CorrectedReflectance_TrueColor_Global_Annual&STYLES=&FORMAT=image%2Fjpeg&SRS=EPSG%3A3857&BBOX=-11076289.333930722%2C2433661.6158086867%2C-10998365.690375429%2C2535554.6198507366&WIDTH=1224&HEIGHT=1600&TIME=2000-12-01",
+  "attribution": "NASA GIBS · USGS/Landsat · WELD (mosaico histórico 2000)",
+  "dataPolicy": "https://www.earthdata.nasa.gov/engage/open-data-services-software/data-use-policy"
+}

@@ -1,0 +1,28 @@
+{
+  "bbox": {
+    "west": -99.5,
+    "east": -98.8,
+    "south": 21.35,
+    "north": 22.2
+  },
+  "projection": "EPSG:3857 normalized crop",
+  "source_zoom": 10,
+  "width": 320,
+  "height": 418,
+  "minimum_m": -79,
+  "maximum_m": 2895,
+  "encoding": "linear grayscale 8-bit; elevation_m=minimum_m+pixel/255*(maximum_m-minimum_m)",
+  "urls": [
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/228/447.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/229/447.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/230/447.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/228/448.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/229/448.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/230/448.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/228/449.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/229/449.png",
+    "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/230/449.png"
+  ],
+  "horizontal_span_mercator_m": 77923.64355529181,
+  "file_bytes": 47301
+}

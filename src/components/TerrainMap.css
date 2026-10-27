@@ -1,0 +1,80 @@
+.terrain-map { width: 100%; height: 100%; position: relative; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 49% 45%, #e6eddf00 20%, #e9eee3a1 78%); }
+.terrain-map canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; cursor: grab; outline: none; opacity: 0; transition: opacity 700ms ease; }
+.terrain-map.is-ready canvas { opacity: 1; }
+.terrain-map canvas:active { cursor: grabbing; }
+.terrain-marker-lines { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.terrain-marker-lines line { stroke: #f4f7e4; stroke-width: 1.2px; stroke-dasharray: 3 2; opacity: 0; filter: drop-shadow(0 1px 1px #1c3c25); }
+.terrain-pin { position: absolute; left: 50%; top: 50%; display: flex; align-items: center; flex-direction: column; gap: 7px; transform: translate(-50%, -100%); padding: 0; border: 0; background: transparent; cursor: pointer; color: #294334; font-family: inherit; transition: opacity .25s; -webkit-tap-highlight-color: transparent; }
+.terrain-pin-label { display: block; padding: 6px 10px; background: rgba(255,255,251,.96); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 2px 12px #1939251c; color: #294334; border-radius: 5px; white-space: nowrap; font-size: 10px; font-weight: 650; line-height: 1.2; letter-spacing: -.1px; transform: translate(var(--label-x, 0px), var(--label-y, 0px)); transition: background .2s, color .2s; }
+.terrain-pin-dot { display: grid; place-items: center; width: 27px; height: 27px; color: #294334; background: #fffcf2; border: 3px solid #ffffff; border-radius: 50%; box-shadow: 0 3px 12px #173d3552; font-size: 8px; font-weight: 800; line-height: 1; transition: transform .2s, background .2s; }
+.terrain-pin-dot svg { width: 17px; height: 17px; }
+.terrain-pin.on-route .terrain-pin-dot { background: #d8ef88; }
+.terrain-pin.is-selected .terrain-pin-label { background: #193d30; color: #fffef4; border-color: #193d30; }
+.terrain-pin.is-selected .terrain-pin-dot { background: #d8ef88; box-shadow: 0 0 0 5px #d8ef8840, 0 3px 12px #173d3552; transform: scale(1.15); }
+.terrain-pin:hover .terrain-pin-label { background: #f3f8e9; }
+.terrain-pin.is-selected:hover .terrain-pin-label { background: #244d3b; }
+.terrain-pin:focus-visible { outline: 2px solid #193d30; outline-offset: 5px; border-radius: 7px; }
+.terrain-pin:hover .terrain-pin-dot { transform: scale(1.13); }
+.terrain-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; color: #54715b; }
+.terrain-loading span { width: 14px; height: 14px; border: 2px solid #bed195; border-top-color: #3a6549; border-radius: 50%; animation: terrain-spin 1s linear infinite; }
+.terrain-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.terrain-fallback svg { width: 100%; max-height: calc(100% - 30px); }
+.terrain-fallback-note { font-size: 10px; color: #60725e; text-align: center; padding: 8px 20px; }
+.terrain-attribution { position: absolute; right: 28px; bottom: 35px; z-index: 2; color: #64735a; background: #f8faefcc; padding: 4px 6px; border-radius: 3px; font-size: 6px; line-height: 1.3; text-decoration: none; }
+.terrain-attribution:hover { color: #1e4936; background: #fffef5; }
+.terrain-immersive { background: #071d18; }
+.terrain-immersive canvas { cursor: grab; }
+.terrain-immersive .terrain-pin { gap: 8px; }
+.terrain-immersive .terrain-pin-label { display: flex; align-items: center; gap: 9px; padding: 6px 10px 6px 6px; min-height: 43px; background: rgba(8, 29, 23, .93); border: 1px solid #b7d3ba42; border-radius: 8px; color: #f1f5e9; box-shadow: 0 8px 26px #00000038; font-size: 11px; font-weight: 500; text-align: left; }
+.terrain-immersive .terrain-pin-photo { width: 33px; height: 33px; flex-shrink: 0; object-fit: cover; border-radius: 4px; border: 1px solid #ffffff22; }
+.terrain-immersive .terrain-pin-name { display: block; line-height: 1.25; }
+.terrain-immersive .terrain-pin-name small { display: block; color: #a6bba7; margin-top: 5px; font-size: 6px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; }
+.terrain-immersive .terrain-pin-arrow { align-self: flex-start; color: #bdd39e; font-size: 12px; padding-left: 4px; }
+.terrain-immersive .terrain-pin-dot { width: 20px; height: 20px; border: 2px solid #d3e4bd; color: #d3e4bd; background: #173d2b; font-size: 7px; box-shadow: 0 2px 10px #00000050; }
+.terrain-immersive .terrain-pin-dot svg { width: 12px; height: 12px; }
+.terrain-immersive .terrain-pin.on-route .terrain-pin-dot { color: #183b28; background: #d9f19f; border-color: #edf8d3; }
+.terrain-immersive .terrain-pin.is-selected .terrain-pin-label { color: #1d392b; background: #e3efc6; border-color: #dff4b5; box-shadow: 0 0 0 3px #d0ee9e16, 0 10px 35px #00000045; }
+.terrain-immersive .terrain-pin.is-selected .terrain-pin-name small { color: #62744b; }
+.terrain-immersive .terrain-pin.is-selected .terrain-pin-arrow { color: #3d6040; }
+.terrain-immersive .terrain-pin.is-selected .terrain-pin-dot { color: #183b28; background: #d8ff65; box-shadow: 0 0 0 5px #d8ff651c; }
+.terrain-immersive .terrain-pin:hover .terrain-pin-label { background: #234d38; border-color: #d3e5b97a; }
+.terrain-immersive .terrain-pin.is-selected:hover .terrain-pin-label { background: #edf5da; }
+.terrain-immersive .terrain-pin:focus-visible { outline-color: #e1f2bc; }
+.terrain-immersive .terrain-marker-lines line { stroke: #cbe5aa; stroke-width: 1; }
+.terrain-immersive .terrain-loading { color: #b5cbb3; }
+.terrain-immersive .terrain-fallback-note { color: #b5cbb3; }
+.terrain-immersive .terrain-attribution { right: 20px; bottom: 16px; color: #9db6a0; background: #09251bd9; border: 1px solid #a8c7a61a; font-size: 7px; }
+.terrain-area-label { position: absolute; z-index: 3; display: flex; align-items: center; gap: 7px; padding: 8px 10px; transform: translate(-50%, 0); max-width: 165px; text-align: left; border: 1px solid; border-radius: 7px; background: #09251fdb; color: #e8efdc; font-family: inherit; cursor: pointer; box-shadow: 0 3px 16px #0003; }
+.terrain-area-label[hidden] { display: none; }
+.terrain-area-kicker { display: flex; align-items: center; gap: 5px; font-size: 6px; letter-spacing: 1.4px; font-weight: 500; text-transform: uppercase; color: #bdceb4; }
+.terrain-area-kicker i { display: block; width: 4px; height: 4px; border-radius: 50%; }
+.terrain-area-label strong { display: block; font-size: 11px; font-weight: 500; letter-spacing: -.2px; line-height: 1.2; }
+.terrain-area-label small { display: block; color: #aac0a6; font-size: 6px; margin-top: 4px; letter-spacing: .5px; }
+.terrain-area-color { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.terrain-area-arrow { color: #b6caa9; font-size: 11px; padding-left: 2px; }
+.terrain-area-explore { display: flex; align-items: center; gap: 24px; color: #aabd9f; font-size: 7px; margin-top: 2px; }
+.terrain-area-label:hover, .terrain-area-label.is-active { background: linear-gradient(90deg, #163d2ce8, #163d2c99); }
+.terrain-area-label.is-active strong { color: #edffc9; }
+.terrain-area-label:focus-visible { outline: 2px solid #e1f2bc; outline-offset: 4px; }
+.terrain-immersive .terrain-pin.detail-dot .terrain-pin-label { display: none; }
+.terrain-immersive .terrain-pin.detail-dot:hover .terrain-pin-label, .terrain-immersive .terrain-pin.detail-dot:focus-visible .terrain-pin-label { display: flex; }
+.terrain-immersive .terrain-pin.detail-dot .terrain-pin-label, .terrain-immersive .terrain-pin.detail-journey .terrain-pin-label, .terrain-immersive .terrain-pin.detail-member .terrain-pin-label { padding: 6px 8px; min-height: 0; font-size: 10px; border-radius: 5px; gap: 0; }
+.terrain-immersive .terrain-pin.detail-member .terrain-pin-label { max-width: 90px; }
+.terrain-immersive .terrain-pin.detail-member .terrain-pin-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.terrain-immersive .terrain-pin.detail-dot .terrain-pin-name small, .terrain-immersive .terrain-pin.detail-journey .terrain-pin-name small, .terrain-immersive .terrain-pin.detail-member .terrain-pin-name small, .terrain-immersive .terrain-pin.detail-dot .terrain-pin-arrow, .terrain-immersive .terrain-pin.detail-journey .terrain-pin-arrow, .terrain-immersive .terrain-pin.detail-member .terrain-pin-arrow { display: none; }
+@media (max-width: 700px) {
+  .terrain-immersive .terrain-pin-label { font-size: 9px; gap: 6px; min-height: 35px; padding: 4px 7px 4px 4px; }
+  .terrain-immersive .terrain-pin-photo { width: 27px; height: 27px; }
+  .terrain-immersive .terrain-pin-name small { font-size: 5px; letter-spacing: .8px; margin-top: 3px; }
+  .terrain-immersive .terrain-pin-dot { width: 19px; height: 19px; }
+  .terrain-immersive .terrain-pin-arrow { display: none; }
+  .terrain-immersive .terrain-attribution { font-size: 5px; bottom: 10px; right: 10px; }
+  .terrain-area-label { max-width: 145px; padding: 6px 8px; gap: 5px; }
+  .terrain-area-label strong { font-size: 10px; }
+  .terrain-area-kicker { font-size: 5px; letter-spacing: 1px; }
+  .terrain-area-explore { font-size: 6px; }
+}
+@keyframes terrain-spin { to { transform: rotate(360deg); } }
+@media (max-width: 700px) { .terrain-pin-label { font-size: 8px; padding: 5px 6px; } .terrain-pin { gap: 5px; } .terrain-pin-dot { width: 23px; height: 23px; font-size: 7px; border-width: 2px; } .terrain-pin:not(.on-route):not(.is-selected) .terrain-pin-label { display: none; } }
+@media (max-width: 700px) { .terrain-immersive .terrain-pin.detail-area .terrain-pin-label, .terrain-immersive .terrain-pin.detail-focus .terrain-pin-label, .terrain-immersive .terrain-pin.detail-member .terrain-pin-label, .terrain-immersive .terrain-pin.detail-dot:hover .terrain-pin-label, .terrain-immersive .terrain-pin.detail-dot:focus-visible .terrain-pin-label { display: flex; } .terrain-immersive .terrain-pin.detail-dot .terrain-pin-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .terrain-pin-label, .terrain-pin-dot, .terrain-map canvas { transition: none; } .terrain-loading span { animation: none; } }
