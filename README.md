@@ -1,14 +1,38 @@
 # Huasteca inmersiva
 
-Avance funcional de un estudio para negocios turísticos de la Huasteca Potosina. El storyboard de dirección visual se traduce en cuatro flujos implementados: explorar lugares, construir un paquete, recorrerlo en 3D y previsualizar la experiencia del viajero.
+Guía espacial de la Huasteca Potosina y estudio para crear experiencias turísticas. Permite descubrir pueblos, plazas, alojamientos, cultura, comida, servicios y naturaleza, y entender su entorno antes de guardar un lugar o consultar a su responsable.
 
-## GitHub Pages
+La entrada principal es una guía del centro de Xilitla. El catálogo regional contiene **19 fichas**; **siete** también pertenecen al directorio local y **seis** se representan como pines interactivos. La ficha del pueblo de Xilitla funciona como ancla del centro y no añade un séptimo pin.
 
-Dirección del avance: **https://impalagrim21.github.io/huasteca-inmersiva/**.
+El estudio de paquetes mantiene el atlas, los recorridos por capítulos y el editor de los seis atractivos iniciales. La guía personal de lugares y los paquetes del operador son flujos distintos de esta entrega.
 
-El workflow `.github/workflows/deploy-pages.yml` compila y despliega automáticamente los cambios de `main`. Usa Node.js 22, `npm ci`, TypeScript y Vite; sólo publica `dist/`. La base pública es `/huasteca-inmersiva/`, con imágenes, mapas y fuentes resueltos para ese subdirectorio. El desarrollo local conserva la base `/`.
+## Ver el proyecto
 
-Para comprobar localmente la misma compilación que publica Pages:
+[**Abrir Huasteca inmersiva en GitHub Pages**](https://impalagrim21.github.io/huasteca-inmersiva/).
+
+El workflow de [GitHub Pages](.github/workflows/deploy-pages.yml) compila los cambios de `main` con Node.js 22, `npm ci`, TypeScript y Vite; publica únicamente `dist/`. La base de producción es `/huasteca-inmersiva/` y la de desarrollo local es `/`.
+
+## Ejecutar en local
+
+Requiere Node.js 22.12 o superior compatible con Vite.
+
+```powershell
+npm ci
+npm run dev
+```
+
+Abrir [http://127.0.0.1:5173/](http://127.0.0.1:5173/). El servidor se limita al equipo local.
+
+Para compilar y revisar la versión de producción:
+
+```powershell
+npm run build
+npm run preview
+```
+
+`build` comprueba TypeScript y genera `dist/`. `preview` muestra su dirección en la consola. La aplicación es estática; imágenes, fuentes, geometría urbana y mapas se sirven desde sus propios archivos.
+
+Para probar específicamente la base de GitHub Pages, usar la misma variable al compilar y al iniciar el preview:
 
 ```powershell
 $env:VITE_BASE_PATH = '/huasteca-inmersiva/'
@@ -16,74 +40,63 @@ npm run build
 npm run preview
 ```
 
-Al regresar al desarrollo en la raíz, retirar la variable de esa terminal con `Remove-Item Env:VITE_BASE_PATH` y volver a compilar.
+Abrir la ruta `/huasteca-inmersiva/` del puerto indicado. Para regresar al desarrollo en la raíz, detener el servidor, ejecutar `Remove-Item Env:VITE_BASE_PATH` y volver a compilar o iniciar desarrollo. Esta variable sólo configura la ruta pública; no es una credencial.
 
-## Ejecutar
+## Guía espacial entregada
 
-Requiere Node.js 22.12 o superior compatible con Vite.
+- **Lugares con identidad:** directorio, búsqueda y filtros por pueblo, plaza, hospedaje, cultura, comida, servicios y naturaleza. Cada ficha enlaza evidencia oficial, documental o cartográfica y aclara los límites de su ubicación.
+- **Dos escalas:** guía urbana de Xilitla y atlas regional de los 19 lugares. Los sitios de otros municipios conservan su contexto geográfico.
+- **Selección y perspectiva:** elegir uno de los seis pines o su ficha lleva la cámara a la maqueta. Se puede alternar entre los puntos de observación «Llegada», «Entorno» y «Calle», y volver a la vista general.
+- **Exploración a altura humana:** arrastrar para mirar, caminar con WASD/flechas o controles táctiles y cambiar el campo de visión con la rueda. La caminata respeta los límites de la escena y los volúmenes representados.
+- **Previsualización coherente:** la miniatura se genera con la cámara de la propia maqueta. La interfaz la distingue de las fotografías reales.
+- **Orientación:** plano urbano con calles, huellas, lugar seleccionado, posición de cámara y dirección de mirada; luz de día/atardecer, zoom, nombres, resaltado de trazas y pantalla completa.
+- **Mi guía:** guardar y retirar lugares, recuperar la selección en este navegador, descargarla como texto y compartirla mediante un enlace que incluye sus IDs. Al abrir ese enlace se carga la lista compartida.
+- **Escritorio y móvil:** ficha expandible, directorio, controles táctiles, diálogos y navegación por teclado. Las transiciones respetan la preferencia de movimiento reducido. Sin WebGL se dispone de planos SVG para consultar la geometría y seleccionar lugares.
 
-```powershell
-npm install
-npm run dev
-```
+Los seis pines locales corresponden a Jardín Hidalgo, templo/exconvento de San Agustín, Museo Leonora Carrington, Posada El Castillo, Hotel Hostal Del Café y Expendio de Café. Son referencias documentadas; la guía no acredita por sí sola que un negocio esté atendiendo hoy.
 
-Abrir **http://127.0.0.1:5173/**. El servidor se limita al equipo local.
+## Probar el flujo principal
 
-```powershell
-npm run build
-npm run preview
-```
+1. Al abrir, reconoce el centro de Xilitla en vista general. Elige un lugar en el directorio o sobre la escena.
+2. Una vez en perspectiva humana, arrastra para mirar y usa WASD/flechas o los botones táctiles para caminar. Usa **Despejar vista** para ampliar el entorno y **Ver ficha** para recuperar la información o cambiar entre **Llegada**, **Entorno** y **Calle**.
+3. Usa el plano urbano para orientarte. **Volver a Xilitla** o Escape recuperan la vista general.
+4. Guarda dos lugares con el marcador de la ficha. Abre **Mi guía**, descarga la selección y copia su enlace; ábrelo para recuperar esa lista.
+5. Pulsa **Huasteca Potosina** en la navegación superior para explorar los lugares regionales y sus categorías. Las fichas de otros municipios no simulan una cámara dentro de Xilitla.
+6. Entra a **Estudio** para explorar el atlas de experiencias, crear un paquete o editar sus paradas. **Guía inmersiva** en el menú del estudio regresa a la guía de lugares.
 
-`build` comprueba TypeScript y produce `dist/`. `preview` sirve esa compilación en el puerto que indica la consola. La aplicación es estática y no necesita variables de entorno, claves API ni servicios de pago.
+## Estudio de experiencias conservado
 
-## Lo que funciona
+El atlas mantiene tres áreas editoriales, selección de destinos, vista cenital, capas, iluminación y recorridos por capítulos con pausa, avance manual, velocidad y seguimiento de cámara. Sus polígonos organizan la exploración; no son límites administrativos ni accesos autorizados.
 
-- **Atlas Vivo:** tres áreas seleccionables sobre el relieve y mediante tarjetas. La cámara se acerca al área o al destino, los marcadores ajustan su detalle al contexto y los lugares mantienen su relación con el territorio.
-- **Recorrido por capítulos:** reproducción y pausa, salto directo entre paradas, avance manual, ritmos 0.5×/1×/2×, seguimiento de cámara, llegada al final y repetición. El tiempo del reproductor corresponde a la presentación visual, no a los traslados.
-- **Ventanas al destino:** fotografías reales a pantalla completa con 18 puntos informativos, acercamiento, arrastre, navegación por teclado y retorno al mismo capítulo. Son imágenes interactivas, no panoramas 360 ni videos de un recorrido real.
-- **Diseño desde el paisaje:** crear un paquete con los lugares de un área o con el destino abierto en su fotografía; editar la ruta que se está recorriendo.
-- **Perspectivas del paisaje:** vista orbital/cenital, satélite/curvas de nivel, luz de día/atardecer, zoom y pantalla completa.
-- Explorador Three.js/WebGL con relieve geográfico real (INEGI/Mapzen), imagen satelital histórica (NASA/Landsat), cámara orbital, zoom, centrado, capas hipsométricas, vista cenital, pantalla completa y recorrido animado. Si WebGL no está disponible, se ofrece una vista SVG utilizable.
-- Seis atractivos reales con fotografías y fuentes: Tamul, Puente de Dios, Micos, Tamasopo, Las Pozas de Edward James y el Sótano de las Golondrinas.
-- Catálogo con búsqueda, categorías y selección de rutas.
-- Creación, edición y eliminación de paquetes: lugares, orden de visitas, descripción, duración, precio, capacidad, servicios y estado local.
-- Persistencia de paquetes e identidad del negocio en `localStorage`, con validación de datos y gestión de errores de almacenamiento.
-- Vista del viajero con fotos, itinerario, servicios, precio y descarga de un archivo de texto.
-- Interfaz adaptable a escritorio y móvil, diálogos nativos con foco, navegación por teclado y respeto al movimiento reducido.
+Las seis fotografías reales de Tamul, Puente de Dios, Micos, Tamasopo, Las Pozas y el Sótano de las Golondrinas se exploran con acercamiento, arrastre y 18 anotaciones verificadas. Son fotografías interactivas; no capturas 360 ni recorridos grabados.
 
-## Probar la experiencia inmersiva
+El editor permite crear, editar y eliminar paquetes con descripción, lugares, orden, duración, precio, capacidad, servicios y estado local. La vista del viajero presenta el itinerario y permite descargarlo. La identidad del negocio se guarda al confirmar el formulario.
 
-1. En **Vista general**, elige «Agua que conecta» en el terreno o en su tarjeta. La cámara entra al área y aparecen sus lugares.
-2. Elige Tamul y abre **Entrar al lugar**. Toca los puntos de interés; acerca y arrastra la fotografía. Regresa con Escape o **Volver al territorio**.
-3. Abre **Vivir una ruta**. Elige un capítulo, arrastra el avance, cambia el ritmo o activa **Seguir cámara**. La foto y el capítulo permanecen sincronizados.
-4. Usa **Crear ruta en esta área**, **Crear paquete con este lugar** o **Diseñar esta ruta** para continuar en el editor con las paradas correctas.
+## Geografía y alcance
 
-Las áreas son agrupaciones editoriales para explorar experiencias. Sus polígonos no son límites administrativos, zonas de acceso habilitado ni rutas autorizadas.
+La escena urbana deriva de OpenStreetMap: **35 huellas de edificios, 98 trazas, una plaza y un patio interior**, en un JSON de aproximadamente 22 KB. La selección de origen abarca 400 m alrededor de Jardín Hidalgo y las geometrías se recortan a ±450 m. La cobertura de edificios es parcial. Las alturas, fachadas y mobiliario son interpretativos; los puntos de observación pertenecen a esta representación. No se reproducen interiores ni vistas comprobadas desde habitaciones concretas.
 
-## Alcance de esta entrega
+El relieve regional usa elevaciones INEGI/Mapzen y un mosaico histórico NASA/Landsat de 2000, con altura visual exagerada 4×. Los marcadores son orientativos. La animación y las líneas de los paquetes no calculan carreteras, accesibilidad, trayectos habilitados ni tiempos de traslado.
 
-Es un prototipo local funcional. «Publicado» es un estado de demostración dentro del navegador. Los precios, permanencias, capacidad y servicios de los ejemplos son editables; no son tarifas comerciales verificadas. Las líneas del mapa muestran el orden de visita y no calculan carreteras ni tiempos de traslado.
+La guía y las fuentes no constituyen inventario comercial. Las habitaciones, servicios y condiciones actuales se consultan con sus responsables. Los precios, capacidades y permanencias del estudio son datos de demostración editables; «Publicado» es un estado local de un paquete. Esta versión no tiene cuentas de negocios, sincronización remota, reservas ni cobros.
 
-El relieve usa alturas medidas y un mosaico satelital histórico de 2000. La elevación se exagera visualmente 4× para comunicar la forma de la sierra. Los marcadores son orientativos. El mapa no pretende representar el estado actual de los caminos o accesos.
+Guías, paquetes e identidad se guardan en `localStorage`, por navegador y origen. El enlace compartido transporta una selección de lugares; no sincroniza cambios posteriores entre personas ni confirma una contratación. La aplicación pública y un servidor local tienen almacenes distintos.
 
-Los datos locales pertenecen al navegador y al origen usados. No se sincronizan entre usuarios o dispositivos. Esta etapa todavía no incluye autenticación, aislamiento de cuentas de negocios, base de datos remota, reservas, cobros ni publicación pública. Esos elementos requieren una etapa de backend e integración.
+## Arquitectura, fuentes y evidencia
 
-## Dirección visual y archivos
+| Archivo o documento | Contenido |
+| --- | --- |
+| [SpatialGuide](src/components/SpatialGuide.tsx) | Guía, directorio, selección, ficha y lista personal. |
+| [CityScene](src/components/CityScene.tsx) / [GuideMiniMap](src/components/GuideMiniMap.tsx) | Maqueta urbana, cámara, perspectivas y orientación. |
+| [guide-data](src/guide-data.ts) / [geometría urbana](public/guide/xilitla-center.json) | Identidades, categorías, fuentes y geometría OSM del piloto. |
+| [App](src/App.tsx) | Entrada a la guía y flujos del estudio, editor e identidad. |
+| [ImmersiveExplorer](src/components/ImmersiveExplorer.tsx), [TerrainMap](src/components/TerrainMap.tsx), [PhotoExperience](src/components/PhotoExperience.tsx) | Atlas regional, recorridos y ventanas fotográficas. |
+| [Fuentes urbanas](docs/guide-map-sources.md) / [investigación regional](docs/huasteca-guide-research.md) | Procedencia, coordenadas, consultas, verificación y datos desconocidos. |
+| [Referente y adaptación](docs/referente-maestro-football-stadium.md) | Análisis de selección espacial, perspectiva y acción aplicado de forma original a turismo. |
+| [Fuentes del relieve](docs/map-sources.md) | Elevación, satélite, proyección, escala y peticiones reproducibles. |
+| [Créditos de imágenes](docs/image-credits.md) / [tipografías](docs/font-credits.md) | Autores, licencias y archivos locales. |
+| [QA de guía v3](docs/qa-guide-v3.md), [QA inmersiva v2](docs/qa-ux-v2.md), [QA inicial](docs/qa.md) | Alcance y evidencia de las verificaciones de cada entrega. |
 
-- `src/App.tsx`: flujo del operador, editor y vista del viajero.
-- `src/components/TerrainMap.tsx`: render y cámara 3D.
-- `src/components/ImmersiveExplorer.tsx`: áreas, recorrido por capítulos, control de progreso y navegación contextual.
-- `src/components/PhotoExperience.tsx`: visor fotográfico interactivo accesible.
-- `src/experience-data.ts`: tres áreas, seis relatos y puntos de interés sobre fotografías verificadas.
-- `src/data.ts`: datos iniciales y validación de paquetes persistidos.
-- `public/images/`: fotografías WebP optimizadas; no se conservan originales duplicados.
-- `public/maps/`: satélite WebP, heightmap PNG y metadatos del recorte geográfico, aproximadamente 500 KB en conjunto.
-- `public/fonts/`: fuentes variables WOFF2 autoalojadas, 62 KB, con licencias OFL.
-- `docs/concepto-storyboard.webp`: referencia generada de dirección de producto, 308 KB; no sustituye la aplicación.
-- `docs/image-credits.md`: autores, licencias y fuentes de fotografías.
-- `docs/destinations-research.md`: investigación y límites de información turística.
-- `docs/map-sources.md`: fuentes geográficas, atribución, proyección, escala y peticiones reproducibles.
-- `docs/qa.md`: cobertura y evidencia de pruebas.
-- `docs/qa-ux-v2.md`: cobertura y evidencia de la ampliación inmersiva.
+La geometría derivada de OSM se distribuye bajo [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) con atribución [© OpenStreetMap contributors](https://www.openstreetmap.org/copyright). Las fotografías y fuentes conservan sus propias licencias. El aprendizaje del referente se documenta sin incorporar su código ni sus assets al producto.
 
-Three.js se carga como módulo separado cuando se abre el explorador. El paisaje se renderiza en el navegador y no descarga archivos de modelos 3D. Las fotografías del catálogo suman aproximadamente 1.05 MB. La app no hace llamadas a NASA, AWS o Google Fonts durante el uso; los recursos se sirven localmente. El renderer dibuja bajo demanda en reposo y se suspende con la pestaña oculta. Se reutilizan las dependencias del entorno para optimizar medios sin instalar herramientas adicionales.
+Three.js y las escenas se cargan por módulos. La maqueta se genera a partir del JSON urbano; los recursos no requieren consultas a Overpass, NASA, AWS ni Google Fonts durante la exploración. Las fotos suman aproximadamente 1.05 MB, los mapas unos 500 KB y las dos fuentes variables unos 62 KB. Los originales de investigación en `.work/` quedan fuera de Git y del despliegue.

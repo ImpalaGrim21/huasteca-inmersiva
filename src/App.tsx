@@ -7,7 +7,8 @@ import type { Category, Destination, TourPackage } from './data'
 
 const TerrainMap = lazy(() => import('./components/TerrainMap'))
 const ImmersiveExplorer = lazy(() => import('./components/ImmersiveExplorer'))
-type View = 'overview' | 'packages' | 'destinations' | 'business'
+const SpatialGuide = lazy(() => import('./components/SpatialGuide'))
+type View = 'guide' | 'overview' | 'packages' | 'destinations' | 'business'
 type Business = { name: string; email: string; municipality: string; description: string }
 const defaultBusiness: Business = { name: 'Aventuras Huastecas', email: '', municipality: 'Ciudad Valles', description: 'Experiencias locales para descubrir lo extraordinario de la Huasteca Potosina.' }
 const categoryIcon = (category: string, size = 15) => category === 'Agua y cascadas' ? <Droplets size={size} /> : category === 'Cultura' ? <Leaf size={size} /> : <Mountain size={size} />
@@ -85,7 +86,7 @@ function PackageEditor({ value, onClose, onSave, onDelete }: { value: TourPackag
 export default function App() {
   const [initial] = useState(readPackages)
   const [packages, setPackages] = useState<TourPackage[]>(initial.packages)
-  const [view, setView] = useState<View>('overview')
+  const [view, setView] = useState<View>('guide')
   const [business, setBusiness] = useState<Business>(readBusiness)
   const [businessDraft, setBusinessDraft] = useState<Business>(() => ({ ...business }))
   const [activeId, setActiveId] = useState(initial.packages[0]?.id || '')
@@ -134,8 +135,10 @@ export default function App() {
     const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }))
     const a = document.createElement('a'); a.href = url; a.download = `huasteca-${p.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase()}.txt`; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); toast('Itinerario descargado.')
   }
-  const navItems = [{ id: 'overview' as View, title: 'Vista general', icon: Compass }, { id: 'packages' as View, title: 'Mis paquetes', icon: Package }, { id: 'destinations' as View, title: 'Explorar destinos', icon: MapPin }, { id: 'business' as View, title: 'Mi negocio', icon: Store }]
+  const navItems = [{ id: 'guide' as View, title: 'Guía inmersiva', icon: Map }, { id: 'overview' as View, title: 'Atlas regional', icon: Compass }, { id: 'packages' as View, title: 'Mis paquetes', icon: Package }, { id: 'destinations' as View, title: 'Explorar destinos', icon: MapPin }, { id: 'business' as View, title: 'Mi negocio', icon: Store }]
   const pageTitle = navItems.find(item => item.id === view)!.title
+
+  if (view === 'guide') return <Suspense fallback={<div className="sg-loading">Abriendo la guía del territorio…</div>}><SpatialGuide onStudio={() => navigate('overview')} /></Suspense>
 
   return <div className="app-shell">
     {menuOpen && <button className="sidebar-scrim" onClick={() => setMenuOpen(false)} aria-label="Cerrar menú" />}

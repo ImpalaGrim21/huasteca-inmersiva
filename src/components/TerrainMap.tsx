@@ -1,5 +1,6 @@
 import { assetUrl } from '../asset-url'
 import { useEffect, useRef, useState } from 'react'
+import { BedDouble, Building2, Landmark, Leaf, Mountain, Store, Utensils } from 'lucide-react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import type { ExperienceArea } from '../experience-data'
@@ -768,6 +769,7 @@ export default function TerrainMap(props: Props) {
     {!fallback && props.destinations.map(destination => {
       const routeIndex = props.routeIds.indexOf(destination.id)
       const selected = props.selectedId === destination.id
+      const PlaceIcon = destination.category === 'Hospedaje' ? BedDouble : destination.category === 'Pueblos' ? Building2 : destination.category === 'Cultura' ? Landmark : destination.category === 'Plazas' ? Leaf : destination.category === 'Comida' ? Utensils : destination.category === 'Servicios' ? Store : Mountain
       const journey = typeof props.journeyProgress === 'number'
       const activeArea = props.areas?.find(area => area.id === props.activeAreaId)
       const detail = !props.immersive ? 'legacy' : journey ? routeIndex >= 0 ? 'journey' : 'dot' : props.focusedDestinationId ? selected ? 'focus' : 'dot' : activeArea ? activeArea.destinationIds.includes(destination.id) ? selected ? 'area' : 'member' : 'dot' : 'dot'
@@ -786,7 +788,7 @@ export default function TerrainMap(props: Props) {
         type="button"
       >
         <span className="terrain-pin-label">{props.immersive && (detail === 'area' || detail === 'focus') && destination.image && <img className="terrain-pin-photo" src={destination.image} alt="" />}<span className="terrain-pin-name">{destination.name}{props.immersive && <small>{routeIndex >= 0 ? `PARADA ${String(routeIndex + 1).padStart(2, '0')}` : destination.category}</small>}</span>{props.immersive && <span className="terrain-pin-arrow">↗</span>}</span>
-        <span className="terrain-pin-dot">{routeIndex >= 0 ? String(routeIndex + 1).padStart(2, '0') : <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 13 4-7 3 5 2-3 4 6H4Z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" /></svg>}</span>
+        <span className="terrain-pin-dot">{routeIndex >= 0 ? String(routeIndex + 1).padStart(2, '0') : <PlaceIcon aria-hidden="true" size={16} strokeWidth={1.5} />}</span>
       </button>
     })}
     {!ready && !fallback && <div className="terrain-loading"><span />Preparando el paisaje…</div>}
