@@ -8,15 +8,21 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "skills:install": "pwsh -NoProfile -File scripts/install-skills.ps1",
-    "skills:doctor": "node scripts/skills-doctor.mjs",
+    "skills:doctor": "node scripts/skills-doctor.mjs && node scripts/hermes-skills-doctor.mjs",
     "test:e2e": "node --test --test-concurrency=1 tests/e2e/platform.test.mjs",
-    "verify": "node scripts/skills-doctor.mjs --project-only && npm run build && npm run test:e2e"
+    "test:mobility:contract": "node --experimental-strip-types --test tests/mobility-integration.test.mjs tests/mobility-travel-tools.test.mjs",
+    "test:mobility:e2e": "node --test --test-concurrency=1 tests/e2e/mobility.test.mjs",
+    "test:mobility:tools": "node --test --test-concurrency=1 tests/e2e/mobility-tools.test.mjs",
+    "test:mobility:journey:contract": "node --experimental-strip-types --test tests/mobility-journey.test.mjs tests/mobility-offline-update.test.mjs",
+    "test:mobility:journey:e2e": "node --test --test-concurrency=1 tests/e2e/mobility-journey.test.mjs",
+    "verify": "node scripts/skills-doctor.mjs --project-only && node scripts/hermes-skills-doctor.mjs && npm run build && npm run test:mobility:contract && npm run test:mobility:journey:contract && npm run test:e2e && npm run test:mobility:e2e && npm run test:mobility:tools && npm run test:mobility:journey:e2e"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "6.16.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "three": "^0.180.0",
-    "lucide-react": "^0.468.0"
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -24,8 +30,8 @@
     "@types/react-dom": "^19.2.0",
     "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "playwright": "^1.56.0",
     "typescript": "~5.9.3",
-    "vite": "^7.1.0",
-    "playwright": "^1.56.0"
+    "vite": "^7.1.0"
   }
 }

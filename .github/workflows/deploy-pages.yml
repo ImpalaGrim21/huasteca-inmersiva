@@ -51,7 +51,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: acceptance-failure
-          path: .work/qa/latest/
+          path: |
+            .work/qa/latest/
+            .work/metrored-prototype/qa/
+            .work/metrored-next/journey-e2e/
           if-no-files-found: ignore
           retention-days: 3
 

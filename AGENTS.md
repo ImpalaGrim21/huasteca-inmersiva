@@ -31,6 +31,10 @@ El usuario pidió expresamente el 26-10-2026 instalar y usar img2threejs y la se
 | Teclado, foco, semántica y movimiento | `.agents/skills/ecc-frontend-a11y/SKILL.md`. |
 | Rendimiento React/Three y vida de recursos | `.agents/skills/ecc-react-performance/SKILL.md`, sólo secciones que correspondan a esta SPA. |
 | Persistencia, enlaces, entradas y límites de confianza | `.agents/skills/ecc-security-review/SKILL.md`, según la superficie presente. |
+| Ideación, expansión y selección de funciones de MiRedMetro | `.agents/skills/creative-ideation/SKILL.md`, empezando por `.agents/skills/hermes-common/MIREDMETRO.md` y cargando el método pertinente. |
+| Evaluar fricción de un viaje y recuperación ante fallos | `.agents/skills/adversarial-ux-test/SKILL.md`, con la adaptación MiRedMetro, una persona ficticia explícita, build de producción, evidencia y filtro obligatorio. |
+
+Nous Research se integró por instrucción expresa del usuario el 28-10-2026. Ambas skills y sus referencias son sólo instrucciones, fijadas en `tools/hermes-skills-lock.json`, con MIT conservada. `scripts/hermes-skills-doctor.mjs` comprueba su integridad. No instalar Hermes Agent o modelos por aplicar estas guías. Distinguir investigación de usuarios reales de una persona sintética de QA. Aplicar creative-ideation por ciclos concretos a la plataforma completa, sin convertir todas las técnicas en un ritual ni prometer datos de transporte inexistentes.
 
 Primero leer `ecc-common/HUASTECA.md`. Las instrucciones vigentes del usuario y del entorno prevalecen sobre ejemplos de skills. Los snippets son referencias; no activar automáticamente perfiles, MCP, hooks, memoria, servicios, descargas o comandos ajenos al cambio. Las correcciones locales de ejemplos upstream están documentadas.
 

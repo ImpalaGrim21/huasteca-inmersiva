@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/NousResearch/hermes-agent",
+  "commit": "83bde48a4d9760d84220a9b29094a1ad86410f6e",
+  "scope": "project instructions only",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "version": "2.1.0",
+      "path": ".agents/skills/creative-ideation/SKILL.md"
+    },
+    {
+      "name": "adversarial-ux-test",
+      "version": "1.0.0",
+      "path": ".agents/skills/adversarial-ux-test/SKILL.md"
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/adversarial-ux-test/SKILL.md",
+      "upstreamPath": "optional-skills/dogfood/adversarial-ux-test/SKILL.md",
+      "blobSha": "2c5ba20c513b2049416f5d570303309c27bab423",
+      "canonicalBytes": 8960,
+      "canonicalSha256": "d687ee7727174fd58acbe638038b207f7fb86ea27603a34cb3b0f1b0889b0dd7"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/SKILL.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/SKILL.md",
+      "blobSha": "003f7f49781a6bb0a092315be1eb2ad19392e509",
+      "canonicalBytes": 10434,
+      "canonicalSha256": "b0b2a36387ecdf363550a341ee6941fe4fae0443564d730c0121a6a66114f36c"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/anti-slop.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/anti-slop.md",
+      "blobSha": "afad3470e32b30c11e1f63d9361270e76bfb2854",
+      "canonicalBytes": 7223,
+      "canonicalSha256": "796a13eb2261da541bc88e998107bde05051afe98d4593067014870ddbec4622"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/exercises.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/exercises.md",
+      "blobSha": "c958583cd6046df6f223847d43b699d2bd6671b0",
+      "canonicalBytes": 6069,
+      "canonicalSha256": "26d06abe06a0e9fc0777fdd1c94845bd7438d2085ebcf720b614cc4304193817"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/full-prompt-library.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/full-prompt-library.md",
+      "blobSha": "9ae0c4e5b9a446ce1ab44973f538dbd7cfc4c2d2",
+      "canonicalBytes": 8119,
+      "canonicalSha256": "2ff29d678fe05c5f4e3bf8cfa427fa388f04af1817820acde03d34d325ee403e"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/heuristics.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/heuristics.md",
+      "blobSha": "48b32aba1c818161eb47bd6e94c80cc408ede294",
+      "canonicalBytes": 5133,
+      "canonicalSha256": "77e4a4e6d84d46a2032dacafce7f3aac7c84369d0567573d3f543454791ac71d"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/method-catalog.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/method-catalog.md",
+      "blobSha": "5c797348847b602af21d4fdee49e801b5ffc53ca",
+      "canonicalBytes": 4932,
+      "canonicalSha256": "7e2c3ea7a665b34e869732cc9cbe1e3fb3bcaf2775925b764c1985af8375ffc8"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/affinity-diagrams.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/affinity-diagrams.md",
+      "blobSha": "b9341c8922b7033d4ed77a210fc3191cc7f6bd25",
+      "canonicalBytes": 4661,
+      "canonicalSha256": "530d23c4a5318081abdb02dd9a16cdccfb710f6ff3c59ca4c655103847ca1ee5"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/analogy-and-blending.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/analogy-and-blending.md",
+      "blobSha": "b4672f7f0f9b8f0df9a46aecf62d560136b9ed9b",
+      "canonicalBytes": 5330,
+      "canonicalSha256": "c4791856bd9cfa6cc466a7afd41a6d575e8ea891f37c3f82cc5615df6acc0d36"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/biomimicry.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/biomimicry.md",
+      "blobSha": "54b675982eda05dbcfe402c472a401c07fbc2adc",
+      "canonicalBytes": 4596,
+      "canonicalSha256": "858c03f00d012274ee1dd8ecb1dcbc3f0b863dfeffc81a5aee850a013ba6afb8"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/chance-and-remix.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/chance-and-remix.md",
+      "blobSha": "873a38d76a71b472f2b211518b01b66b43222598",
+      "canonicalBytes": 3839,
+      "canonicalSha256": "9598c9f6ebafdfa23c4066b50b6fb9ebe2c45867786095b7775d8b5e52163c94"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/compression-progress.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/compression-progress.md",
+      "blobSha": "043fa36cd4e80f0a31df39f7f9a716a2948fdb95",
+      "canonicalBytes": 3024,
+      "canonicalSha256": "bd4950f559d03ef2a225adc73cf6452acfc3d8863e41cf82ecf518aae26c29f0"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/creative-discipline.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/creative-discipline.md",
+      "blobSha": "1dd8e04285f4f1a11e5eb686a5b5607ec261acdb",
+      "canonicalBytes": 5057,
+      "canonicalSha256": "c9bb83348fd90b1315c5d78bbbe4f18d30b3c1b8378037588442cb38404fa77d"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/defamiliarization.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/defamiliarization.md",
+      "blobSha": "59b14220ee630bea6370b217c87312f1d43d1016",
+      "canonicalBytes": 4180,
+      "canonicalSha256": "588095139e2d48ab2c1af5af74676aca0bfc922f2d294c69dcb7c8351b3f8878"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/derive-and-mapping.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/derive-and-mapping.md",
+      "blobSha": "3257aff71216a84930df317a74a89e3ecd745b7f",
+      "canonicalBytes": 4298,
+      "canonicalSha256": "16b88dee7743896616c4e81aa24cb736a4b85597f2527bc1094914d16108e354"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/first-principles.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/first-principles.md",
+      "blobSha": "8ab64874cc5141451414d5ace9950b603801ebb3",
+      "canonicalBytes": 4234,
+      "canonicalSha256": "a16641171d7c2f2174f11ebb265a62d05e4872f41fb0165d8b59b5652c82a071"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/jobs-to-be-done.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/jobs-to-be-done.md",
+      "blobSha": "af467b7f78279d93f69794f585f0db6a4bca9905",
+      "canonicalBytes": 4014,
+      "canonicalSha256": "35572cbcb92f3281ee066821dede7d968b319be5c9c51a842f8852efa63adf27"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/lateral-provocations.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/lateral-provocations.md",
+      "blobSha": "9fbb9deda0ec53ff8bcac06f947d40e2dad4ee3e",
+      "canonicalBytes": 3780,
+      "canonicalSha256": "de8149d9e88b0caf2fed9204fdabf5aded1fca374820a79bc21e228a1be01f8f"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/leverage-points.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/leverage-points.md",
+      "blobSha": "f3c003914b00f026c8db527bd0532bf421415538",
+      "canonicalBytes": 4674,
+      "canonicalSha256": "64843a765d197451c5a6b914f27ae96e1332df6196d39b52298f62609c5c3cbd"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/oblique-strategies.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/oblique-strategies.md",
+      "blobSha": "c2e7f772154303146ceddc6941e2fdc2463b945f",
+      "canonicalBytes": 2916,
+      "canonicalSha256": "4dfeb8b6fe9440c6432c77d8c14a680a4494fd42e8732269e18515e0b26d163a"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/oulipo.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/oulipo.md",
+      "blobSha": "502ace54dd86af486fe606c9a424612a5527adfc",
+      "canonicalBytes": 3313,
+      "canonicalSha256": "939f40ca502fb462a63609ef98f8cf484b96dd57ba380cfbbd5eb4eac36eb946"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/pataphysics.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/pataphysics.md",
+      "blobSha": "ff652a803ce08bb6f14656d51073d226d480b233",
+      "canonicalBytes": 3934,
+      "canonicalSha256": "23440de3e5a336154c24c002a66238cd1ddce166675a479a56d505c1e157af1a"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/pattern-languages.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/pattern-languages.md",
+      "blobSha": "a902cf697aeb09564b4d72b65a255b9e92b17571",
+      "canonicalBytes": 4608,
+      "canonicalSha256": "4337612cae61449b33a09417dffb4f078437c034d018d70d0bce94191a9c6040"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/polya.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/polya.md",
+      "blobSha": "837c2728877a048e263363644ba7335c2720ce07",
+      "canonicalBytes": 3572,
+      "canonicalSha256": "3d2cc6a75fac4cb488ddfbf8c895d7545fe7847f8f7ee6f58e4d44e5f99bcb33"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/premortem-and-inversion.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/premortem-and-inversion.md",
+      "blobSha": "44f65f2631b45fa8df18b46a5a7609c7a0c3a8bd",
+      "canonicalBytes": 3756,
+      "canonicalSha256": "188f1897e66276942bfadd0c54b1821b867487ff60ee9265583bbd439497a71f"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/scamper.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/scamper.md",
+      "blobSha": "1c9295db598436e2759f6570deaf5d67324cf38d",
+      "canonicalBytes": 3575,
+      "canonicalSha256": "73ab6700be4c46723a9a0d74845ce3f7ea0f722b476046ce440481790ec0cc6b"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/story-skeletons.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/story-skeletons.md",
+      "blobSha": "df82d970914ef327e8faf1e9247c3700fc941f4b",
+      "canonicalBytes": 6211,
+      "canonicalSha256": "17925ac3f62ecb730561bf118a0c2e55d509cc4c8ec85394b51506435bf73881"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/triz-principles.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/triz-principles.md",
+      "blobSha": "bcbb3d4bd1237751d87c2853d018d1c56c23355c",
+      "canonicalBytes": 6021,
+      "canonicalSha256": "a4c877bc84f5fec2318c7a4929b86dbf1e48186d9510aff2e9a103ba9198c7a7"
+    },
+    {
+      "path": ".agents/skills/creative-ideation/references/methods/volume-generation.md",
+      "upstreamPath": "optional-skills/creative/creative-ideation/references/methods/volume-generation.md",
+      "blobSha": "0b822d4e4cd8b4a06aefad120de4b34b2c067445",
+      "canonicalBytes": 3909,
+      "canonicalSha256": "605a9b158a5d7f6305d61c7c14f50584e87b8201749492256c8e3d352c35e06c"
+    },
+    {
+      "path": ".agents/skills/hermes-common/LICENSE-NOUS.txt",
+      "upstreamPath": "LICENSE",
+      "blobSha": "75410e73319c72cd3e991a501c5455eb78f38375",
+      "canonicalBytes": 1070,
+      "canonicalSha256": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6"
+    },
+    {
+      "path": ".agents/skills/hermes-common/MIREDMETRO.md",
+      "origin": "local-adaptation",
+      "canonicalBytes": 3253,
+      "canonicalSha256": "57ffd3120f3be90038d6ed200b0aaeb54911988abdc85c8d4dec15ba074740b8"
+    }
+  ],
+  "runtimeDependencies": [],
+  "notes": [
+    "Source SKILL and all creative method references are intact.",
+    "No Hermes runtime, packages, models, hooks or services installed.",
+    "Only the reviewed project instruction files are distributed; existing ECC lock remains unchanged."
+  ]
+}

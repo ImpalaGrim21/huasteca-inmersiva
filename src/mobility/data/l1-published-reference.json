@@ -1,0 +1,39 @@
+{
+  "id": "metrored-valles-l1-published-2025-09-09",
+  "name": "Línea 1 Universitaria",
+  "orderedNames": [
+    "Las Águilas",
+    "UASLP",
+    "Instituto de Ciencias y Estudios",
+    "CBTIS",
+    "Zona de Transferencia Tipzen",
+    "Ciudad Valles",
+    "Plaza Punto Novel",
+    "Rotarios",
+    "Zona Centro",
+    "Reforma",
+    "Hospital General IMSS",
+    "Avenida México",
+    "Lienzo Charro",
+    "Morelos",
+    "Tauro",
+    "Mujeres Solidaridad",
+    "Tecnológico Nacional de México",
+    "López Mateos",
+    "El Consuelo"
+  ],
+  "sourceUrl": "https://www.liderempresarial.com/estudiantes-en-ciudad-valles-slp-estrenan-metrored-esta-es-la-ruta/",
+  "sourcePublisher": "Líder Empresarial",
+  "publishedAt": "2025-09-09",
+  "reviewedAt": "2026-10-28",
+  "verification": "secondary-published-reference",
+  "announcedStationCount": 32,
+  "listedNameCount": 19,
+  "limitations": [
+    "La publicación anuncia 32 estaciones, pero enumera 19 nombres; no constituye un inventario completo de paraderos.",
+    "Es una referencia nominal publicada en septiembre de 2025. No confirma la operación ni el recorrido vigentes en octubre de 2026.",
+    "El orden publicado no verifica el lado de abordaje, las coordenadas, las variantes ni la secuencia de regreso.",
+    "Los nombres Ciudad Valles y Zona de Transferencia Tipzen requieren aclaración; no deben fusionarse automáticamente con otros paraderos.",
+    "No se encontró una licencia abierta explícita para los gráficos o mapas de la publicación. Este archivo consigna hechos nominales con atribución, sin copiar gráficos ni geometría."
+  ]
+}

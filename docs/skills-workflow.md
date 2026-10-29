@@ -90,3 +90,10 @@ Se ejecutó el doctor real en modos completo y proyecto. El modo completo recono
 Cinco comprobaciones aisladas bajo `.work/`, eliminadas al terminar, demostraron: omisión explícita en CI; aceptación de un clon CRLF; rechazo de alteración de contenido; rechazo de una ruta que intenta salir del proyecto; y conservación de un directorio ajeno simulado. No se tocaron las instalaciones reales durante esas pruebas.
 
 La rama de primera descarga/junction del wrapper no se volvió a ejecutar sobre la instalación real para evitar otra descarga y cambios innecesarios. Su código se revisó junto con el instalador oficial completo; la instalación existente y el episodio EPERM que originó la junction están documentados en la tarea principal. Estas comprobaciones no sustituyen las regresiones del producto.
+# MiRedMetro: ideación y evaluación adversarial
+
+Integración solicitada el 28-10-2026: `creative-ideation` 2.1.0 y `adversarial-ux-test` 1.0.0 de NousResearch/hermes-agent, commit `83bde48a4d9760d84220a9b29094a1ad86410f6e`. Se incluyen ambas instrucciones, la biblioteca de 27 referencias creativas y MIT; aproximadamente 149 KB contando adaptación local. Sin Hermes Agent, modelos, hooks o servicios. El bloqueo independiente está en [hermes-skills-lock.json](../tools/hermes-skills-lock.json).
+
+Leer primero [adaptación MiRedMetro](../.agents/skills/hermes-common/MIREDMETRO.md). `npm run skills:doctor` comprueba la instalación y `npm run verify` la incluye en CI. No se necesita descargar de nuevo el repositorio: las instrucciones están versionadas dentro del proyecto.
+
+La aplicación creativa se documenta en [IDEACION-APLICADA.md](metrored/IDEACION-APLICADA.md): selección con inversión, expansión con SCAMPER y arquitectura con patrones, en ciclos separados. La auditoría de una persona ficticia conserva pasos, capturas y filtro pragmático; no constituye investigación de pasajeros reales. Las evidencias de necesidades reales permanecen separadas en [INVESTIGACION-USUARIOS.md](metrored/INVESTIGACION-USUARIOS.md).

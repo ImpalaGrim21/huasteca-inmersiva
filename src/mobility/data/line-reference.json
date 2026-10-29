@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 1,
+  "id": "valles-l1",
+  "name": "Línea 1 · Universitaria",
+  "shortName": "L1",
+  "city": "Ciudad Valles, San Luis Potosí",
+  "checkedAt": "2026-10-28",
+  "center": [
+    -99.009,
+    22.002
+  ],
+  "bounds": [
+    [
+      -99.045,
+      21.972
+    ],
+    [
+      -98.969,
+      22.032
+    ]
+  ],
+  "coordinateSystem": "WGS84",
+  "coordinateOrder": "longitude,latitude",
+  "geometry": null,
+  "directions": [],
+  "stopCoverage": "partial-community-catalog",
+  "stopCoverageNotice": "Paradas cartográficas de OSM; no es el padrón completo ni una validación operativa de SCT. Confirma el sentido en el parador.",
+  "dataNotice": "Sin conexión a posiciones ni llegadas de SCT. Las paradas y destinos son datos cartográficos, no unidades en tiempo real.",
+  "stops": [
+    {
+      "id": "osm-node-13135322256",
+      "name": "Avenida México",
+      "coordinates": [
+        -99.0190267,
+        21.9984162
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322256",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135374331",
+      "name": "Avenida México",
+      "coordinates": [
+        -99.0190139,
+        21.9982607
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135374331",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 1,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135378895",
+      "name": "CBTis",
+      "coordinates": [
+        -98.9933307,
+        21.9779809
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135378895",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 1,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135378896",
+      "name": "CBTis",
+      "coordinates": [
+        -98.9933062,
+        21.9777671
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135378896",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 1,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364875",
+      "name": "El Consuelo",
+      "coordinates": [
+        -99.0260316,
+        22.0263344
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364875",
+      "osmUpdatedAt": "2025-09-11T01:29:07Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322254",
+      "name": "Hospital General IMSS",
+      "coordinates": [
+        -99.0112271,
+        21.9963828
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322254",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322255",
+      "name": "Hospital General IMSS",
+      "coordinates": [
+        -99.0111701,
+        21.9958437
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322255",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364873",
+      "name": "La Estrella",
+      "coordinates": [
+        -99.0282004,
+        22.0206516
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364873",
+      "osmUpdatedAt": "2025-09-11T01:29:07Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364874",
+      "name": "La Estrella",
+      "coordinates": [
+        -99.0282211,
+        22.0206088
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364874",
+      "osmUpdatedAt": "2025-09-11T01:29:07Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322257",
+      "name": "Lienzo Charro",
+      "coordinates": [
+        -99.0256757,
+        21.9978595
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322257",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322258",
+      "name": "Lienzo Charro",
+      "coordinates": [
+        -99.0256978,
+        21.9977472
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322258",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322259",
+      "name": "Morelos",
+      "coordinates": [
+        -99.0309409,
+        22.0054328
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322259",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322260",
+      "name": "Morelos",
+      "coordinates": [
+        -99.031048,
+        22.0056247
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322260",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364869",
+      "name": "Mujeres en Solidaridad",
+      "coordinates": [
+        -99.0369609,
+        22.0152672
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364869",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364870",
+      "name": "Mujeres en Solidaridad",
+      "coordinates": [
+        -99.0370537,
+        22.0152672
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364870",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135318446",
+      "name": "Plaza Nobel",
+      "coordinates": [
+        -99.0047924,
+        21.9799273
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135318446",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": [
+        "Plaza Punto Novel",
+        "Punto Novel"
+      ]
+    },
+    {
+      "id": "osm-node-13135318447",
+      "name": "Plaza Nobel",
+      "coordinates": [
+        -99.0049871,
+        21.9798303
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135318447",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": [
+        "Plaza Punto Novel",
+        "Punto Novel"
+      ]
+    },
+    {
+      "id": "osm-node-13135364876",
+      "name": "Reforma",
+      "coordinates": [
+        -99.0119919,
+        21.9913323
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364876",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364877",
+      "name": "Reforma",
+      "coordinates": [
+        -99.0117646,
+        21.9913728
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364877",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364878",
+      "name": "Rotarios",
+      "coordinates": [
+        -99.0077497,
+        21.9825743
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364878",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364879",
+      "name": "Rotarios",
+      "coordinates": [
+        -99.0073788,
+        21.9826064
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364879",
+      "osmUpdatedAt": "2025-09-11T01:36:52Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322261",
+      "name": "Tauro",
+      "coordinates": [
+        -99.0365001,
+        22.0085533
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322261",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322262",
+      "name": "Tauro",
+      "coordinates": [
+        -99.0363593,
+        22.0083915
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322262",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135364871",
+      "name": "Tecnológico",
+      "coordinates": [
+        -99.0353392,
+        22.0216506
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364871",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": [
+        "Tec de Valles",
+        "Instituto Tecnológico de Ciudad Valles"
+      ]
+    },
+    {
+      "id": "osm-node-13135364872",
+      "name": "Tecnológico",
+      "coordinates": [
+        -99.0354216,
+        22.0216631
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135364872",
+      "osmUpdatedAt": "2025-09-11T01:11:34Z",
+      "osmVersion": 2,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": [
+        "Tec de Valles",
+        "Instituto Tecnológico de Ciudad Valles"
+      ]
+    },
+    {
+      "id": "osm-node-13135322226",
+      "name": "Zona Centro",
+      "coordinates": [
+        -99.0122559,
+        21.986085
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322226",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    },
+    {
+      "id": "osm-node-13135322227",
+      "name": "Zona Centro",
+      "coordinates": [
+        -99.0124319,
+        21.9862677
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/13135322227",
+      "osmUpdatedAt": "2025-09-11T01:05:39Z",
+      "osmVersion": 3,
+      "surveyDate": "2025-09-10",
+      "verification": "community-mapped",
+      "directionId": null,
+      "sequence": null,
+      "wheelchair": null,
+      "aliases": null
+    }
+  ],
+  "references": [
+    {
+      "id": "osm-way-300701643",
+      "name": "UASLP · Campus Huasteca",
+      "category": "education",
+      "coordinates": [
+        -98.97730394999999,
+        21.980717249999998
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/300701643",
+      "osmName": "Universidad Autónoma de San Luis Potosí Zona Huasteca",
+      "osmUpdatedAt": "2021-10-09T21:30:12Z",
+      "coordinateMethod": "osm-area-bounding-box-midpoint",
+      "verification": "cartographic-reference",
+      "isStop": false,
+      "aliases": [
+        "Universidad",
+        "UASLP",
+        "Campus Huasteca",
+        "UAMZH"
+      ],
+      "officialLineSource": "slp-l1-2026",
+      "description": "Referencia del destino; este punto no identifica un lugar de ascenso ni una entrada accesible."
+    },
+    {
+      "id": "osm-way-305081744",
+      "name": "Hospital IMSS · Zona 6",
+      "category": "health",
+      "coordinates": [
+        -99.01185065,
+        21.9958905
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/305081744",
+      "osmName": "Hospital General de Zona Número 6",
+      "osmUpdatedAt": "2024-03-15T04:02:27Z",
+      "coordinateMethod": "osm-area-bounding-box-midpoint",
+      "verification": "cartographic-reference",
+      "isStop": false,
+      "aliases": [
+        "IMSS",
+        "Hospital General",
+        "Clínica"
+      ],
+      "officialLineSource": "slp-l1-2026",
+      "description": "Referencia del destino; este punto no identifica un lugar de ascenso ni una entrada accesible."
+    },
+    {
+      "id": "osm-node-8112808286",
+      "name": "Zona Centro",
+      "category": "center",
+      "coordinates": [
+        -99.0173292,
+        21.9860498
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/node/8112808286",
+      "osmName": "Zona Centro",
+      "osmUpdatedAt": "2025-07-25T00:18:42Z",
+      "coordinateMethod": "osm-neighbourhood-label",
+      "verification": "cartographic-reference",
+      "isStop": false,
+      "aliases": [
+        "Centro",
+        "Centro de Ciudad Valles"
+      ],
+      "officialLineSource": "slp-l1-2026",
+      "description": "Referencia del destino; este punto no identifica un lugar de ascenso ni una entrada accesible."
+    },
+    {
+      "id": "osm-way-300145888",
+      "name": "Tecnológico de Ciudad Valles",
+      "category": "education",
+      "coordinates": [
+        -99.03772230000001,
+        22.02222075
+      ],
+      "sourceUrl": "https://www.openstreetmap.org/way/300145888",
+      "osmName": "Instituto Tecnológico de Ciudad Valles",
+      "osmUpdatedAt": "2026-05-14T04:27:51Z",
+      "coordinateMethod": "osm-area-bounding-box-midpoint",
+      "verification": "cartographic-reference",
+      "isStop": false,
+      "aliases": [
+        "Tec",
+        "TecNM",
+        "Instituto Tecnológico"
+      ],
+      "officialLineSource": "slp-l1-2026",
+      "description": "Referencia del destino; este punto no identifica un lugar de ascenso ni una entrada accesible."
+    }
+  ],
+  "service": {
+    "liveTracking": {
+      "status": "not-connected",
+      "vehicles": [],
+      "arrivals": []
+    },
+    "schedule": null,
+    "lastDeparture": null,
+    "firstDeparture": null,
+    "boarding": {
+      "status": "official-public-portal",
+      "qrRegistrationUrl": "https://redmetrovalles.sctslp.com/",
+      "sourceId": "sct-qr"
+    },
+    "fare": {
+      "amount": 0,
+      "sourceId": "slp-l1-2026",
+      "currency": "MXN",
+      "status": "published"
+    },
+    "frequencyMinutes": null,
+    "accessibility": {
+      "verified": false,
+      "notice": "No se dispone de un inventario actual de accesibilidad por parador."
+    }
+  },
+  "externalCommunityMap": {
+    "url": "https://www.google.com/maps/d/viewer?mid=1YwkNdZRe3yNWuj9GI4SlCybkmUQDs4Q",
+    "notice": "Mapa publicado por un tercero; atribución institucional, vigencia y licencia pendientes de confirmar. Su geometría no se incorpora a este prototipo.",
+    "title": "Mi RedMetro - Ciudad Valles - Riviera Huasteca",
+    "author": "Joel Centeno",
+    "verification": "authorship-and-operational-validity-not-confirmed",
+    "reuseLicense": null
+  },
+  "attribution": {
+    "scope": "Datos cartográficos OSM de paradas y referentes. Créditos separados del mapa base OpenFreeMap.",
+    "text": "© Colaboradores de OpenStreetMap",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  "sources": [
+    {
+      "url": "https://api.openstreetmap.org/api/0.6/nodes.json?nodes=13135318446,13135318447,13135322226,13135322227,13135322254,13135322255,13135322256,13135322257,13135322258,13135322259,13135322260,13135322261,13135322262,13135364869,13135364870,13135364871,13135364872,13135364873,13135364874,13135364875,13135364876,13135364877,13135364878,13135364879,13135374331,13135378895,13135378896",
+      "notes": "IDs descubiertos en changeset171760284; cada nodo reconsultado a la versión actual. Extracción parcial, sin relaciones de ruta ni secuencia.",
+      "kind": "community-cartography",
+      "retrievedAt": "2026-10-28",
+      "title": "OpenStreetMap · nodos actuales de paradas Red Metro Linea 1",
+      "id": "osm-station-snapshot"
+    },
+    {
+      "url": "https://slp.gob.mx/noticias/2026/3/11/redmetro-de-valles-supera-12-millones-de-viajes-y-m%C3%A1s-apoyo-a-las-familias-ricardo-gallardo/",
+      "notes": "La fecha del cuerpo es febrero, distinta de URL. Confirma L1 Universitaria y Tec/IMSS/Centro/UASLP, no coordenadas ni orden de paradas.",
+      "kind": "government-publication",
+      "title": "Gobierno SLP · RedMetro de Valles supera 1.2 millones de viajes",
+      "publishedAt": "2026-02-14",
+      "id": "slp-l1-2026"
+    },
+    {
+      "url": "https://slp.gob.mx/noticias/2025/2/7/ricardo-gallardo-define-las-nuevas-rutas-de-metrored-en-valles-y-rioverde/",
+      "notes": "Anuncio previo; no se usa como padrón vigente.",
+      "kind": "government-preopening-announcement",
+      "title": "Gobierno SLP · nuevas rutas Valles y Rioverde",
+      "publishedAt": "2025-02-06",
+      "id": "slp-planned-2025"
+    },
+    {
+      "url": "https://redmetrovalles.sctslp.com/",
+      "notes": "Portada y aviso de privacidad; no se consultaron registros personales.",
+      "kind": "official-portal",
+      "retrievedAt": "2026-10-28",
+      "title": "SCTSLP · registro RedMetro Ciudad Valles",
+      "id": "sct-qr"
+    }
+  ]
+}
